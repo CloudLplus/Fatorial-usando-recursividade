@@ -1,0 +1,36 @@
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+
+//prototipando a função
+void Fatorial(int num,int fat=1);
+
+int main()
+{
+    //variaveis
+    int n;
+
+    //Pegando o numero do usuario e o enviando para a função
+    cout<<"Insira um numero para saber seu fatorial: ";
+    cin>>n;
+    Fatorial(n);
+
+    system("pause");
+    return 0;
+    }
+
+void Fatorial(int num,int fat)
+ {
+     //Determinando o fatorial
+    fat=fat*num;
+    num=num-1;
+    cout<<fat<<endl;;
+
+    //Utilizando da recursividade para chamar novamente a função
+    //até que a condição dada seja satisfeita.
+    if(num>1){
+        Fatorial(num,fat);
+    }
+
+ }
